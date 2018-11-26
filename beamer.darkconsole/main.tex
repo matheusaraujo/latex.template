@@ -1,0 +1,84 @@
+\documentclass{beamer}
+\usepackage{mathspec}
+\usepackage{xeCJK}
+\usepackage{listings}
+\setCJKmainfont{IPAPMincho}
+\setCJKsansfont{IPAGothic}
+\setCJKmonofont{IPAGothic}
+
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont{Latin Modern Mono}
+
+\usetheme{DarkConsole}
+
+\title{\texttt{xpto argh}}
+\subtitle{blah blah blah blah ...}
+\author{Matheus Araujo}
+\date{26 nov 2018}
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}{Agenda}
+  \tableofcontents
+\end{frame}
+
+\section{Sessão 1}
+
+\begin{frame}{Primeiro Slide}
+  Texto do primeiro slide
+  \pause
+  \begin{enumerate}
+    \item Teste 1\pause
+    \item Teste 2\pause
+    \item Teste 3
+  \end{enumerate}
+  \pause
+  \begin{itemize}
+    \item Teste 4\pause
+    \item Teste 5\pause
+    \item Teste 6
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Segundo Slide}
+  Texto do segundo slide
+\end{frame}
+
+\section{Sessão 2}
+\begin{frame}
+    Frame vazio doidão
+\end{frame}
+
+\section{Sessão 3}
+
+\begin{frame}{Equações}
+    $$ e^{i\pi} + 1 = 0$$
+\end{frame}
+
+\section{Sessão 4}
+
+\defverbatim[colored]\lstI{
+\begin{lstlisting}[language=C++,basicstyle=\ttfamily,keywordstyle=\color{red}]
+int dfs(int n) {
+  v[n] = 1;
+  for(i = 0; i < LEN; i++) {
+    if (g[n][i] && !v[i]) {
+      dfs(i);
+    }
+  }
+}
+\end{lstlisting}
+}
+
+\begin{frame}{Código}
+    \lstI
+\end{frame}
+
+\end{document}
+
+\endinput
